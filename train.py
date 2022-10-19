@@ -8,11 +8,11 @@ import torch
 import torch.nn as nn
 from torch.optim import lr_scheduler
 import torchvision
-from data_loader import BSDS_RCFLoader
-from models import RCF
-from functions import  cross_entropy_loss_RCF
+from utils.data_loader import BSDS_RCFLoader
+from model.rcf import RCF
+from utils.functions import  cross_entropy_loss_RCF
 from torch.utils.data import DataLoader
-from utils import Logger, Averagvalue, save_checkpoint, load_vgg16pretrain
+from utils.model_utils import Logger, Averagvalue, save_checkpoint, load_vgg16pretrain
 from os.path import join, split, isdir, isfile, splitext, split, abspath, dirname
 
 parser = argparse.ArgumentParser(description='PyTorch Training')

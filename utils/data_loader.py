@@ -1,6 +1,5 @@
 from torch.utils import data
-import os
-from os.path import join, abspath, splitext, split, isdir, isfile
+from os.path import join
 from PIL import Image
 import numpy as np
 import cv2
