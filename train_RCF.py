@@ -1,26 +1,17 @@
-#!/user/bin/python
-# coding=utf-8
 import os, sys
 import numpy as np
 from PIL import Image
 import cv2
-import shutil
 import argparse
 import time
-import datetime
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 from torch.optim import lr_scheduler
 import torchvision
-import torchvision.transforms as transforms
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
 from data_loader import BSDS_RCFLoader
 from models import RCF
-from functions import  cross_entropy_loss_RCF, SGD_caffe
-from torch.utils.data import DataLoader, sampler
+from functions import  cross_entropy_loss_RCF
+from torch.utils.data import DataLoader
 from utils import Logger, Averagvalue, save_checkpoint, load_vgg16pretrain
 from os.path import join, split, isdir, isfile, splitext, split, abspath, dirname
 
